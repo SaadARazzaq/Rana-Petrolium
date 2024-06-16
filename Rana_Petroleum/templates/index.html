@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Petrol Pump Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="sidebar">
+        <img src="static\rana_logo.png" alt="Rana Petroleum" width="250" height="250">
+        <a href="#" class="button" id="dashboard-btn">Dashboard</a>
+        <a href="#" class="button" id="nozzle-data-btn">Nozzle Data</a>
+        <a href="#" class="button" id="kharcha-btn">Kharcha</a>
+        <a href="#" class="button" id="staff-btn">Staff</a>
+        <a href="#" class="button" id="nozzle-db-btn">Nozzle Table</a>
+        <a href="#" class="button" id="nozzle-difference-db-btn">Nozzle Differences Table</a>
+        <a href="#" class="button" id="sale-db-btn">Sales Table</a>
+        <a href="#" class="button" id="settings-btn">Settings</a>
+        <a href="#" class="button" id="about-btn">About US</a>
+    </div>
+
+    <div class="content">
+        <h2>Welcome to Rana Petroleum</h2>
+        <p>Dashboard Graphs.</p>
+
+        <div id="sales-form" class="form-container">
+            <h3>Enter Today's Petrol Rate and Fuel Sold</h3>
+            <div class="form-group">
+                <label for="petrol-rate">Today's Petrol Rate (PKR):</label>
+                <input type="number" id="petrol-rate" placeholder="Enter petrol rate in PKR">
+            </div>
+            <h4>Nozzles:</h4>
+            <div id="nozzles">
+                <!-- Nozzle input fields will be inserted here by JavaScript -->
+            </div>
+            <button id="submit-sales">Submit</button>
+        </div>
+
+        <div id="db-container" class="db-container">
+            <h3>Database Content</h3>
+            <table id="db-table">
+                <thead>
+                    <tr>
+                        <!-- Table headers will be inserted here by JavaScript -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table data will be inserted here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="diff-db-container" class="db-container">
+            <h3>Nozzle Differences Database Content</h3>
+            <table id="differences-db-table">
+                <thead>
+                    <tr>
+                        <!-- Table headers for differences database will be inserted here by JavaScript -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table data for differences database will be inserted here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
