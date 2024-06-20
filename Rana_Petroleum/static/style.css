@@ -115,3 +115,75 @@ th {
     color: #ffffff; /* A400 color text for table headers */
     font-weight: bold;
 }
+
+.about-us-container {
+    display: flex;
+    flex-direction: row; /* Align items horizontally */
+    align-items: center; /* Center items vertically */
+    background: linear-gradient(135deg, #d4f8d4, #a9e7a9);
+    padding: 65px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-content {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space items evenly */
+    flex: 1; /* Take remaining space */
+}
+
+.image-container {
+    flex: 1; /* Take up space for image */
+    margin-right: 20px; /* Add margin for spacing */
+    text-align: center; /* Center image horizontally */
+}
+
+.image-container img {
+    border-radius: 20px;
+    width: 390px; /* Larger image size */
+    height: 580px; /* Maintain aspect ratio */
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    transform-origin: center; /* Set the transform origin to the center */
+}
+
+.image-container img:hover {
+    transform: scale(1.03) rotateY(-2deg); /* Tilt effect */
+    filter: brightness(1.2) saturate(1.2) hue-rotate(10deg);
+}
+
+.info-cards {
+    flex: 1; /* Take up remaining space for info cards */
+    display: flex;
+    flex-direction: column;
+}
+
+.info-cards:hover {
+    transform: scale(1.03) rotateY(-2deg); /* Tilt effect */
+}
+
+.info-card {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.info-card:hover {
+    transform: scale(1.03) rotateY(-2deg); /* Tilt effect */
+}
+
+.info-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.info-card p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
